@@ -1,0 +1,469 @@
+@import "./theme-colors";
+@import "./swiper.scss";
+
+.list-style-n {
+    list-style: none;
+}
+
+/////STYLING NAV BAR/////
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: white;
+
+}
+
+.navtop_wrap {
+    background-color: $darkgreen;
+
+    .nav-top {
+        height: 1.5rem;
+        align-items: center;
+
+        p {
+            color: white;
+            text-transform: capitalize;
+            font-size: 0.8rem;
+            margin: 0;
+        }
+
+        ul {
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-bottom: 0.3rem;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    margin-left: 0.5rem;
+                    font-size: 0.8rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.navbar_wrap {
+    background-color: $white;
+
+    a {
+        text-decoration: none;
+
+        .logoimg {
+            img {
+                height: 100%;
+                width: 3.4rem;
+                object-fit: cover;
+                padding: 0.5rem 0;
+            }
+        }
+
+        h3 {
+            color: $darkgreen;
+            font-family: "Eagle Lake", serif;
+            font-style: normal;
+            font-size: 1rem;
+            margin: 0;
+        }
+    }
+
+    .nav-menu {
+        li {
+            a {
+                display: inline-flex;
+                justify-content: center;
+                width: 5rem;
+                color: $black;
+                font-family: "Outfit", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                text-transform: capitalize;
+                transition: all 0.3s linear;
+                padding: 0.5rem 0;
+                border-radius: 0.5rem;
+
+                &:hover {
+                    background-color: $darkyellow;
+                    color: $darkgreen;
+
+                }
+
+            }
+        }
+    }
+
+    .get_quote {
+        color: $lightgreen;
+        width: 10rem;
+
+        a {
+            background-color: $lightgreen;
+            color: $darkgreen;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-transform: capitalize;
+            font-size: small;
+            font-family: "Outfit", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+
+            i {
+                font-size: large;
+            }
+        }
+    }
+
+    .navbar-toggler-icon {
+        i {
+            color: black;
+            font-size: 2rem;
+        }
+    }
+
+    .navbar-light .navbar-toggler {
+        color: transparent;
+        border-color: transparent;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: 0 0 0 0;
+    }
+
+    .navbar-light .navbar-toggler-icon {
+        background-image: none;
+    }
+}
+
+///
+/// 
+/// 
+/// 
+/// 
+/// 
+//////STYLING HERO SECTION///////
+.hero_sect {
+    margin-top: 86px;
+
+    .swiper {
+        position: relative;
+
+        .swiper-slide {
+            img {
+                height: 80vh;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+
+            &::after {
+                display: none;
+            }
+
+            i {
+                font-size: 2rem;
+                color: $white;
+                background-color: $darkyellow;
+                padding: 0.5rem 1.5rem;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    background-color: $darkyellow;
+                    color: $darkgreen;
+                }
+            }
+        }
+
+        .hero_text {
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgb(14, 73, 41);
+            background: linear-gradient(90deg, rgba(0, 32, 6, 0.9) 4%, rgba(255, 255, 255, 0) 100%);
+            color: $white;
+            text-transform: capitalize;
+            font-family: "Outfit", sans-serif;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-right: 3rem;
+
+            h2 {
+                font-size: 2.4rem;
+            }
+
+            a {
+                background-color: $lightgreen;
+                padding: 0.5rem 1rem;
+                color: $darkgreen;
+                text-decoration: none;
+                border-radius: 0.5rem;
+
+                i {
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+///
+/// 
+/// 
+/// 
+/// 
+//////STYLING SECTION HERO BOTTOM CARS///////
+///  
+.hero_bottomcards {
+    position: relative;
+    margin-bottom: 5rem;
+    z-index: 1;
+}
+
+.hero_bottomcards_inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transform: translateY(-50%);
+
+
+
+    a {
+        position: relative;
+        text-decoration: none;
+        margin: 0 1rem;
+        background-color: $white;
+        color: black;
+        height: 70px;
+        width: 260px;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        font-family: "Outfit", sans-serif;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 700;
+        transition: all 0.3s linear;
+
+        &:before {
+            content: '';
+            position: absolute;
+            border-bottom: 70px solid $darkyellow;
+            border-right: 120px solid transparent;
+            transition: all 0.3s linear;
+            top: 0;
+            left: 0;
+        }
+
+
+        &:hover {
+            background-color: $darkgreen;
+            color: $white;
+
+            i {
+                color: $black;
+            }
+
+            &:before {
+                border-bottom: 70px solid $lightgreen;
+            }
+        }
+
+        i {
+            font-size: 1.25rem;
+            background-color: white;
+            padding: 0.5rem;
+            border-radius: 75%;
+            z-index: 1;
+
+        }
+
+
+    }
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba($black, 0.4) !important;
+}
+///
+/// 
+/// 
+/// 
+/// 
+/// 
+/// STYLING SECTION REQUESTFORM////
+.requestform {
+    display: flex;
+    justify-content: center;
+
+    .requestform_inner{
+        background: rgb(0,112,51);
+        background: radial-gradient(circle, rgba(0,112,51,1) 0%, rgba(2,40,0,1) 82%);
+        width: 70%;
+        text-align: left;
+        padding: 1rem 2rem;
+        h4{
+            color: $white;
+            padding-bottom: 1rem;
+            text-transform: capitalize;
+            font-family: "Outfit", sans-serif;
+            border-bottom: 2px solid $lightgreen;
+
+        }
+        .input_sect {
+            gap: 1rem;
+            input{
+             padding: 0.5rem 0 0.5rem 1rem;
+             border: 0;
+            }
+            button{
+                border: 0;
+                background-color: $lightgreen;
+                color: $darkgreen;
+                text-transform: capitalize;
+                font-family: "Outfit", sans-serif;
+                font-weight: 700;
+                padding: 0.5rem;
+
+            }
+
+        }
+        .bi-info-circle-fill,span{
+            color: $darkyellow;
+        }
+    }
+}
+///
+/// 
+/// 
+/// 
+/// 
+/// 
+/// STYLING SECTIONVIDEO////
+.video_wrap {
+    width: 70%;
+    
+    iframe{
+        width: 40%;
+        height: 60vh;
+        border: 0.5rem solid #eaeaea;
+    }
+    .textbox{
+        width: 40%;
+        h2{
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            font-family: "Outfit", sans-serif;
+            font-weight: 700;
+            span{
+                display: block;
+                color: green;
+                font-family: "Eagle Lake", serif;
+                font-style: normal;
+                font-size: 1.8rem;
+                text-transform: lowercase;
+            }
+        }
+        ul{
+            li{
+                i{
+                    color: $darkyellow;
+                }
+                a {
+                    background-color: $lightgreen;
+                    padding: 0.5rem 1rem ;
+                    color: $darkgreen;
+                    text-decoration: none;
+                    border-radius: 0.5rem;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+    
+                    i {
+                        margin-left: 0.25rem;
+                        color: $darkgreen;
+                    }
+                }
+            }
+        }
+    }
+
+}
+//////
+/// 
+/// 
+/// 
+/// 
+/// 
+/// //STYLING SECTION SERVICE CATEGORIES/////
+.service_categories{
+    background-color:$green;
+    color: $white;
+    h2{
+        font-size: 2rem;
+        text-transform: capitalize;
+        font-family: "Outfit", sans-serif;
+        font-weight: 700;
+    }
+}
+.card_wrapper{
+    width: 80%;
+    flex-wrap: nowrap;
+}
+.card{
+    height: 380px;
+    color: black;
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem 2rem 1rem;
+    box-shadow: 0 .5rem 1rem rgba($black, 0.4) !important;
+    .img_wrap{
+        height: 60%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            padding: 1rem 2.5rem;
+          font-size: 5rem;
+          background-color: $darkgreen;
+          border-radius: 75%;
+          color: $darkyellow;
+        }
+    }
+    .text_body{
+        height: 40%;
+        padding: 1rem;
+        h3{
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            font-family: "Outfit", sans-serif;
+            font-weight: 700;
+        }
+        p{
+            font-size: 0.7rem;
+
+        }
+    }
+
+}
